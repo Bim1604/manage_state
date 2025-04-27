@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.5] - 2025-04-27
+### Update
+- Format observer.dart
+
 ## [1.0.4] - 2025-04-27
 ### Update
 - Format reactive_state.dart

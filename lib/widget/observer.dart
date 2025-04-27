@@ -17,7 +17,6 @@ class Observer extends StatefulWidget {
 }
 
 class _ObserverState extends State<Observer> {
-
   @override
   void initState() {
     super.initState();

@@ -1,6 +1,6 @@
 name: manage_state
 description: A Flutter package for state management without relying on external packages.
-version: 1.0.4
+version: 1.0.5
 license: MIT
 homepage: https://github.com/Bim1604/manage_state
 repository: https://github.com/Bim1604/manage_state
