@@ -27,6 +27,15 @@ View: The UI (Widgets) that reflects the changes when the model (state) changes.
 
 Controller: For managing and updating the state (e.g., using Reactive and Computed).
 
+⚙️ Setup
+To install the `manage_state` package, add the following to your `pubspec.yaml` file:
+
+yaml
+dependencies:
+  manage_state: ^1.0.5
+
+flutter pub get
+
 📦 Supported SDKs
 
 Android: SDK 23 and above
