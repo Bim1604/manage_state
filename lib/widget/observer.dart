@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:manage_state/reactive_state_package.dart';
+import 'package:manage_state/utils/performance_monitor.dart';
 
 class Observer extends StatefulWidget {
   final Reactive listenTo;
@@ -16,6 +17,7 @@ class Observer extends StatefulWidget {
 }
 
 class _ObserverState extends State<Observer> {
+
   @override
   void initState() {
     super.initState();
@@ -45,6 +47,8 @@ class _ObserverState extends State<Observer> {
 
   @override
   Widget build(BuildContext context) {
+    print('[DEBUG] Observer build!');
+    PerformanceMonitor.recordObserverBuild();
     return widget.builder(context);
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manage_state/utils/performance_monitor.dart';
 import 'core/computed.dart';
 import 'core/reactive_state.dart';
 import 'widget/observer.dart';
@@ -75,12 +76,34 @@ class _CounterPageState extends State<CounterPage> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () => counter.value++,
-              child: const Text("Increment"),
+              child: const Text("Update direct by increment"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                counter.updateSync((current) {
+                  return current + 1;
+                });
+              },
+              child: const Text("Update Sync by increment"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                await counter.updateAsync((current) async {
+                  return current + 1;
+                });
+              },
+              child: const Text("Update Async by increment"),
             ),
             ElevatedButton(
               onPressed: () => counter.reset(0),
               child: const Text("Reset"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                PerformanceMonitor.report();
+              },
+              child: const Text('View performance'),
+            )
           ],
         ),
       ),

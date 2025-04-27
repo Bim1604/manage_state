@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:manage_state/utils/performance_monitor.dart';
 
 typedef ReactiveListener = void Function();
 
@@ -13,10 +13,9 @@ class Reactive<T> {
 
   /// Gán giá trị mới và thông báo nếu thay đổi
   set value(T newValue) {
-    if (_value != newValue) {
-      _value = newValue;
-      _notifyListeners();
-    }
+    if (_value == newValue) return;
+    _value = newValue;
+    _notifyListeners();
   }
 
   /// Cập nhật đồng bộ bằng 1 hàm cập nhật
@@ -53,8 +52,16 @@ class Reactive<T> {
 
   /// Gọi tất cả listener
   void _notifyListeners() {
+    final startTime = DateTime.now().microsecondsSinceEpoch;
+
     for (final listener in List<ReactiveListener>.from(_listeners)) {
       listener();
     }
+    final endTime = DateTime.now().microsecondsSinceEpoch;
+    final duration = endTime - startTime;
+
+    // Ghi nhận hiệu suất
+    PerformanceMonitor.recordReactiveNotify(duration);
+
   }
 }
