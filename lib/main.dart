@@ -5,12 +5,12 @@ import 'core/reactive_state.dart';
 import 'widget/observer.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Example());
 }
 
 /// Một ví dụ đơn giản sử dụng Reactive và Observer
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Example extends StatelessWidget {
+  const Example({super.key});
 
   @override
   Widget build(BuildContext context) {

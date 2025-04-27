@@ -1,16 +1,36 @@
-# manage_state
+🌱 Reactive State Package (Flutter)
+A Flutter package for efficient state management without relying on external state management packages. It provides a simple and flexible way to manage both simple and complex state types with automatic UI updates when the state changes.
 
-A new Flutter project.
+📱 User Interface
 
-## Getting Started
+Main Screen: Demonstrates the usage of Reactive state management, updates UI when state changes, and uses Observer to reflect changes.
 
-This project is a starting point for a Flutter application.
+Performance Monitoring: Includes a performance monitor to track state change frequency and UI rebuilds.
 
-A few resources to get you started if this is your first Flutter project:
+State Management Example: A simple counter app that showcases the core features of the package.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🏗️ Architecture & Technologies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Component | Description
+Reactive | State management for simple (e.g., integers) and complex (e.g., nested structures) data.
+Computed | Automatically computes values based on dependencies (e.g., labels or derived data).
+Observer | A widget that listens to reactive state and rebuilds only when the state changes.
+Flutter | Native UI framework for Android & iOS
+Dart | Primary programming language for business logic
+flutter_test | For writing unit and widget tests
+
+Overall Architecture: The package follows a simple and efficient design pattern:
+
+Model: The data (e.g., counter, label) that is managed reactively.
+
+View: The UI (Widgets) that reflects the changes when the model (state) changes.
+
+Controller: For managing and updating the state (e.g., using Reactive and Computed).
+
+📦 Supported SDKs
+
+Android: SDK 23 and above
+
+iOS: iOS 11 and above
+
+Flutter: Stable channel
