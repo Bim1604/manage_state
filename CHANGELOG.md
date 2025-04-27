@@ -1,7 +1,11 @@
 # Changelog
 
+## [1.0.4] - 2025-04-27
+### Update
+- Format reactive_state.dart
+
 ## [1.0.3] - 2025-04-27
-### Added
+### Update
 - Fix errors
 
 ## [1.0.2] - 2025-04-27

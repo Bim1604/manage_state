@@ -62,6 +62,5 @@ class Reactive<T> {
 
     // Ghi nhận hiệu suất
     PerformanceMonitor.recordReactiveNotify(duration);
-
   }
 }
