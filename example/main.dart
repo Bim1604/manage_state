@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:manage_state/reactive_state_package.dart';
 import 'package:manage_state/utils/performance_monitor.dart';
-import 'core/computed.dart';
-import 'core/reactive_state.dart';
-import 'widget/observer.dart';
 
 void main() {
   runApp(const Example());
